@@ -67,6 +67,10 @@ a {
   height: 100%;
 }
 
+a:hover{
+  color: var(--detail-color);
+}
+
 .main {
   width: 100%;
   width: 100%;
@@ -81,7 +85,6 @@ a {
   justify-content: center;
   align-items: center;
   margin: auto;
-  border: 3px white solid;
 }
 
 .content-wrapper.animate {
@@ -142,6 +145,12 @@ a {
   width: 30%;
   height: 100%;
   justify-content: center;
-  align-items: center;
-  margin-top: 300px;
+  align-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.socials{
+  display: flex;
+  gap: 10px;
 }
