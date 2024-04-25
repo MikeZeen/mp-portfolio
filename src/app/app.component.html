@@ -1,0 +1,49 @@
+<mp-navbar [menuItems]="[
+    { label: 'Home', link: 'home'},
+    { label: 'About', link: 'about' },
+    { label: 'Experience', link: 'experience' },
+    { label: 'Projects', link: 'projects' },
+    { label: 'Contact', link: 'contact'}
+    ]"></mp-navbar>
+<main class="main">
+    <div id="home" class="content-wrapper hero">
+        <div class="content hidden">
+            <mp-hero-anim> </mp-hero-anim>
+        </div>
+    </div>
+    <div id="about" class="content-wrapper">
+        <div class="content hidden">
+            <div class="ai-image">
+                <img src="assets/about.png" alt="AI" />
+            </div>
+            <div class="caption">
+                <h1>About Me!</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no 
+                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum 
+                    dolor sit amet, consetetur sadipscing elitr, sed diam
+                </p>
+                <div class="socials">
+            </div>
+            </div>
+        </div>
+    </div>
+    <div id="experience" class="content-wrapper">
+        <div class="content hidden">
+            <h1>Experience</h1>
+        </div>
+    </div>
+    <div id="projects" class="content-wrapper">
+        <div class="content hidden">
+            <h1>Projects</h1>
+        </div>
+    </div>
+    <div id="contact" class="content-wrapper">
+        <div class="content hidden">
+            <h1>Contact</h1>
+        </div>
+    </div>
+</main>
