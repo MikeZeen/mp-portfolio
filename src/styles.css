@@ -51,6 +51,7 @@ body {
   align-content: center;
   cursor: pointer;
   transition: background 0.3s ease;
+  user-select: none;
 }
 
 .active {
@@ -63,13 +64,14 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--primary-bg);
   height: 100%;
 }
 
 a:hover{
-  color: var(--detail-color);
+  color: var(--secondary-bg);
 }
+
 
 .main {
   width: 100%;
@@ -80,15 +82,26 @@ a:hover{
 }
 
 .content-wrapper {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+  height: 100vh;
+  min-height: 800px;
 }
 
 .content-wrapper.animate {
   animation: slideIn 5s ease-out;
+}
+
+.vertical{
+  flex-direction: column;
+  gap: 20px;
+}
+
+.horizontal{
+  flex-direction: row;
+  gap: 20px;
 }
 
 .hero {
@@ -112,10 +125,26 @@ a:hover{
 
 .hidden{
   opacity: 0;
-  transition: all 1s ease;
+  transition: all 1.2s ease-in-out;
   transform: scale(0.2);
-  transform: translate(-250px);
+  transform: translate(-100%);
   filter: blur(1px)
+}
+
+.content:nth-child(2){
+  transition-delay: 300ms;
+}
+.content:nth-child(3){
+  transition-delay: 600ms;
+}
+.content:nth-child(3){
+  transition-delay: 900ms;
+}
+
+@media(preferes-reduced-motion: reduce){
+  .hidden{
+    transition: none;
+  }
 }
 
 .show{
@@ -134,6 +163,7 @@ a:hover{
 .ai-image{
   height: 100%;
   bottom: 0;
+  user-select: none;
 }
 
 .ai-image img{
@@ -146,11 +176,80 @@ a:hover{
   height: 100%;
   justify-content: center;
   align-content: center;
+  text-align: left;
   margin-top: auto;
   margin-bottom: auto;
 }
 
 .socials{
   display: flex;
-  gap: 10px;
+  gap: 20px;
+}
+
+.card{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card h2{
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  color: var(--detail-color)
+}
+
+.card p{
+  white-space: pre-line;
+  margin: 0;
+  line-height: 1.2;
+  padding: 5px;
+}
+
+.card::after{
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 200px;
+  background: white;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+
+.last-card .card::after {
+  display: none;
+}
+
+.details{
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.skill-category{
+  margin: auto;
+  text-align: center;
+}
+
+.skill{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 20px;
+}
+
+.spacer{
+  padding-left: 10px;
+  padding: 10px;
+  background-color: white;
+}
+
+.highlighted{
+  background: var(--detail-color);
+  color: var(--primary-bg);
+  box-shadow: 10px 10px 10px black;
 }

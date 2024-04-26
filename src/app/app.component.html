@@ -2,50 +2,73 @@
     { label: 'Home', link: 'home'},
     { label: 'About', link: 'about' },
     { label: 'Experience', link: 'experience' },
-    { label: 'Projects', link: 'projects' },
-    { label: 'Contact', link: 'contact'}
+    { label: 'Skills', link: 'skills' }
     ]"></mp-navbar>
 <main class="main">
-    <div id="home" class="content-wrapper hero">
-        <div class="content hidden">
+    <section id="home" class="content-wrapper hero">
+        <div class="content">
             <mp-hero-anim> </mp-hero-anim>
         </div>
-    </div>
-    <div id="about" class="content-wrapper">
-        <div class="content hidden">
-            <div class="ai-image">
-                <img src="assets/about.png" alt="Ai depiction of Mike Ponton" />
-            </div>
-            <div class="caption">
+    </section>
+    <section id="about" class="content-wrapper highlighted">
+        <div class="content horizontal">
+            <div class="caption hidden">
                 <h1>About Me!</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
-                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
-                    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no 
-                    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum 
-                    dolor sit amet, consetetur sadipscing elitr, sed diam
+                    I am a 30 year old tech addict from Germany. I have a passion for web development and design. I prefer working on frontend tasks but I am also 
+                    trying to improve my backend skills. I am always looking for new challenges and opportunities to learn and grow.
                 </p>
                 <div class="socials">
                     <a href="https://www.linkedin.com/in/mike-ponton-08580012a/" class="social-link"><ng-icon  name="ionLogoLinkedin" size="36"></ng-icon></a>
                     <a href="https://github.com/MikeZeen" class="social-link"><ng-icon  name="ionLogoGithub" size="36"></ng-icon></a>
+                    <a href="mailto:contact@mikeponton.de" class="social-link"><ng-icon name="iconoirMail" size="36"></ng-icon></a>
+                </div>
+            </div>
+            <div class="ai-image hidden">
+                <img src="assets/about.png" alt="Ai depiction of Mike Ponton" />
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="content-wrapper">
+        <div class="content vertical">
+            <mp-card *ngFor="let card of cards; last as isLast" [class.last-card]="isLast" [content]="card" class="hidden"> </mp-card>
+        </div>
+    </section>
+    <section id="skills" class="content-wrapper">
+        <div class="content vertical">
+            <div class="skill-category hidden">
+                <h2>Preferences</h2>
+                <div class="skill">
+                    <ng-icon name="iconoirVueJs" size="64"></ng-icon>
+                    <ng-icon name="simpleDotnet" size="64"></ng-icon>
+                    <ng-icon name="ionLogoSass" size="64"></ng-icon>
+                    <ng-icon name="simpleTypescript" size="64"></ng-icon>
+                    <ng-icon name="simpleMysql" size="64"></ng-icon>
+                    <ng-icon name="simpleVisualstudiocode" size="64"></ng-icon>
+                    <ng-icon name="simpleGithub" size="64"></ng-icon>
+                </div>
+            </div>
+            <div class="skill-category hidden">
+                <h2>Other Web Related</h2>
+                <div class="skill">
+                    <ng-icon name="simpleAngular" size="48"></ng-icon>
+                    <ng-icon name="simpleReact" size="48"></ng-icon>
+                    <ng-icon name="simpleBootstrap" size="48"></ng-icon>
+                    <ng-icon name="simpleJavascript" size="48"></ng-icon>
+                    <ng-icon name="simpleTailwindcss" size="48"></ng-icon>
+                    <ng-icon name="simpleAzuredevops" size="48"></ng-icon>
+                    <ng-icon name="simpleNodedotjs" size="48"></ng-icon>
+                </div>
+            </div>
+            <div class="skill-category hidden">
+                <h2>Other Skills</h2>
+                <div class="skill">
+                    <ng-icon name="simpleUnrealengine" size="36"></ng-icon>
+                    <ng-icon name="simpleBlender" size="36"></ng-icon>
+                    <ng-icon name="simpleAdobephotoshop" size="36"></ng-icon>
+                    <ng-icon name="simpleAutodesk" size="36"></ng-icon>
                 </div>
             </div>
         </div>
-    </div>
-    <div id="experience" class="content-wrapper">
-        <div class="content hidden">
-            <h1>Experience</h1>
-        </div>
-    </div>
-    <div id="projects" class="content-wrapper">
-        <div class="content hidden">
-            <h1>Projects</h1>
-        </div>
-    </div>
-    <div id="contact" class="content-wrapper">
-        <div class="content hidden">
-            <h1>Contact</h1>
-        </div>
-    </div>
+    </section>
 </main>

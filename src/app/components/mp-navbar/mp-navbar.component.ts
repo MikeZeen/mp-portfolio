@@ -17,5 +17,5 @@ export class MpNavbarComponent {
   scrollTo(link: string) {
   this.selectedItem = link;
   document.getElementById(link)?.scrollIntoView({behavior: "smooth"});
-}
+  }
 }

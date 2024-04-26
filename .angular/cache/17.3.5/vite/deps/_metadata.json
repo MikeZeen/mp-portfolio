@@ -1,43 +1,55 @@
 {
-  "hash": "d425e337",
-  "configHash": "dbc87ac9",
-  "lockfileHash": "dea49d66",
-  "browserHash": "050721e4",
+  "hash": "5215aa65",
+  "configHash": "7fb357fe",
+  "lockfileHash": "23fb54fa",
+  "browserHash": "dd0b4a05",
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
       "file": "@angular_common.js",
-      "fileHash": "d0606e99",
+      "fileHash": "709f14c5",
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "c81de09e",
+      "fileHash": "778f547e",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "7ab465b9",
+      "fileHash": "1da21122",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "b8c1aed3",
+      "fileHash": "933de590",
       "needsInterop": false
     },
     "@ng-icons/core": {
       "src": "../../../../../node_modules/@ng-icons/core/fesm2022/ng-icons-core.mjs",
       "file": "@ng-icons_core.js",
-      "fileHash": "722b923e",
+      "fileHash": "a1e0c681",
+      "needsInterop": false
+    },
+    "@ng-icons/iconoir": {
+      "src": "../../../../../node_modules/@ng-icons/iconoir/fesm2022/ng-icons-iconoir.mjs",
+      "file": "@ng-icons_iconoir.js",
+      "fileHash": "50d07a13",
       "needsInterop": false
     },
     "@ng-icons/ionicons": {
       "src": "../../../../../node_modules/@ng-icons/ionicons/fesm2022/ng-icons-ionicons.mjs",
       "file": "@ng-icons_ionicons.js",
-      "fileHash": "39659d26",
+      "fileHash": "f0b51ec2",
+      "needsInterop": false
+    },
+    "@ng-icons/simple-icons": {
+      "src": "../../../../../node_modules/@ng-icons/simple-icons/fesm2022/ng-icons-simple-icons.mjs",
+      "file": "@ng-icons_simple-icons.js",
+      "fileHash": "b28bf72f",
       "needsInterop": false
     }
   },
