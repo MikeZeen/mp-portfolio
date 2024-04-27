@@ -1,6 +1,10 @@
-# MpPortfolio
+# Mike PontoN - Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
+
+# About
+The intention of this project was to create my small portfolio website. It was quickly put together in Angular in order to discover the main differnces between Vue.JS (my main Framework) and Angular v17.
+My conclusion is that I still prefer Vue.Js but Angular might also come in handy occasionally.
 
 ## Development server
 
