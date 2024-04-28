@@ -69,13 +69,11 @@ a {
   height: 100%;
 }
 
-a:hover{
+a:hover {
   color: var(--secondary-bg);
 }
 
-
 .main {
-  width: 100%;
   width: 100%;
   justify-content: center;
   align-content: center;
@@ -95,12 +93,12 @@ a:hover{
   animation: slideIn 5s ease-out;
 }
 
-.vertical{
+.vertical {
   flex-direction: column;
   gap: 20px;
 }
 
-.horizontal{
+.horizontal {
   flex-direction: row;
   gap: 20px;
 }
@@ -122,61 +120,65 @@ a:hover{
 .hero-text {
   text-transform: uppercase;
   color: var(--detail-color);
-  background: linear-gradient(to right, var(--detail-color), var(--detail-sec-color));
+  background: linear-gradient(
+    to right,
+    var(--detail-color),
+    var(--detail-sec-color)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.hidden{
+.hidden {
   opacity: 0;
   transition: all 1.2s ease-in-out;
   transform: scale(0.2);
   transform: translate(-100%);
-  filter: blur(1px)
+  filter: blur(1px);
 }
 
-.content:nth-child(2){
+.content:nth-child(2) {
   transition-delay: 300ms;
 }
-.content:nth-child(3){
+.content:nth-child(3) {
   transition-delay: 600ms;
 }
-.content:nth-child(3){
+.content:nth-child(3) {
   transition-delay: 900ms;
 }
 
-@media(preferes-reduced-motion: reduce){
-  .hidden{
+@media (preferes-reduced-motion: reduce) {
+  .hidden {
     transition: none;
   }
 }
 
-.show{
+.show {
   opacity: 1;
   transform: scale(1);
   transform: translate(0);
-  filter: blur(0px)
+  filter: blur(0px);
 }
 
-.content{
+.content {
   display: flex;
   justify-content: center;
   margin: auto;
 }
 
-.ai-image{
+.ai-image {
   height: 100%;
   bottom: 0;
   user-select: none;
 }
 
-.ai-image img{
+.ai-image img {
   max-width: 600px;
   border-bottom: 4px white solid;
 }
 
-.caption{
+.caption {
   width: 30%;
   height: 100%;
   justify-content: center;
@@ -186,39 +188,43 @@ a:hover{
   margin-bottom: auto;
 }
 
-.socials{
+.socials {
   display: flex;
   gap: 20px;
 }
 
-.card{
+.card {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.card h2{
+.card h2 {
   margin: 0;
   padding-top: 10px;
   padding-left: 10px;
   padding-bottom: 5px;
   padding-right: 10px;
   color: var(--detail-color);
-  background: linear-gradient(to right, var(--detail-color), var(--detail-sec-color));
+  background: linear-gradient(
+    to right,
+    var(--detail-color),
+    var(--detail-sec-color)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.card p{
+.card p {
   white-space: pre-line;
   margin: 0;
   line-height: 1.2;
   padding: 5px;
 }
 
-.card::after{
+.card::after {
   content: "";
   display: inline-block;
   height: 2px;
@@ -233,17 +239,17 @@ a:hover{
   display: none;
 }
 
-.details{
+.details {
   font-style: italic;
   opacity: 0.5;
 }
 
-.skill-category{
+.skill-category {
   margin: auto;
   text-align: center;
 }
 
-.skill{
+.skill {
   margin: auto;
   display: flex;
   justify-content: center;
@@ -251,26 +257,121 @@ a:hover{
   gap: 20px;
 }
 
-.spacer{
+.spacer {
   padding-left: 10px;
   padding: 10px;
   background-color: white;
 }
 
-.highlighted{
-  background: linear-gradient(to top, var(--detail-color), var(--detail-sec-color));
+.highlighted {
+  background: linear-gradient(
+    to top,
+    var(--detail-color),
+    var(--detail-sec-color)
+  );
   color: var(--primary-bg);
   box-shadow: 10px 0 10px black;
 }
 
-@keyframes blink{
-  0%{opacity: 0;}
-  50%{opacity: 0.8;}
-  100%{opacity: 0;}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.scroll-down{
+.scroll-down {
   margin-bottom: 150px;
   opacity: 0.8;
   animation: blink 2s ease infinite;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    position: fixed;
+    justify-content: left;
+    width: 90vw;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 100;
+  }
+
+  .main {
+    width: 100vw;
+  }
+
+  .content-wrapper {
+    width: 100vw;
+  }
+
+  .content {
+    max-width: 90vw;
+  }
+
+  .logo {
+    width: 0;
+  }
+
+  .menu-item {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hero-wrapper h1 {
+    font-size: 2rem;
+  }
+
+  .ai-image img {
+    max-width: 80%;
+  }
+
+  .caption {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .card::after {
+    width: 100px;
+  }
+
+  #about .content {
+    flex-direction: column-reverse;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .socials {
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .card {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 90vw;
+  }
+
+  .skill {
+    max-width: 90vw;
+  }
+
+  .skill:nth-child(1) ng-icon {
+    --ng-icon__size: 32px !important;
+  }
+
+  .skill:nth-child(2) ng-icon {
+    --ng-icon__size: 24px !important;
+  }
+
+  .skill:nth-child(3) ng-icon {
+    --ng-icon__size: 18px !important;
+  }
 }
