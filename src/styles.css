@@ -4,6 +4,7 @@
   --primary-bg: #1c2127;
   --secondary-bg: #111111;
   --detail-color: #0099ff;
+  --detail-sec-color: #3bbffc;
 }
 
 html {
@@ -121,6 +122,10 @@ a:hover{
 .hero-text {
   text-transform: uppercase;
   color: var(--detail-color);
+  background: linear-gradient(to right, var(--detail-color), var(--detail-sec-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hidden{
@@ -199,7 +204,11 @@ a:hover{
   padding-left: 10px;
   padding-bottom: 5px;
   padding-right: 10px;
-  color: var(--detail-color)
+  color: var(--detail-color);
+  background: linear-gradient(to right, var(--detail-color), var(--detail-sec-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .card p{
@@ -249,7 +258,19 @@ a:hover{
 }
 
 .highlighted{
-  background: var(--detail-color);
+  background: linear-gradient(to top, var(--detail-color), var(--detail-sec-color));
   color: var(--primary-bg);
-  box-shadow: 10px 10px 10px black;
+  box-shadow: 10px 0 10px black;
+}
+
+@keyframes blink{
+  0%{opacity: 0;}
+  50%{opacity: 0.8;}
+  100%{opacity: 0;}
+}
+
+.scroll-down{
+  margin-bottom: 150px;
+  opacity: 0.8;
+  animation: blink 2s ease infinite;
 }

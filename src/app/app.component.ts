@@ -9,7 +9,8 @@ import { ionLogoGithub, ionLogoLinkedin, ionLogoSass } from '@ng-icons/ionicons'
 import { iconoirVueJs, iconoirMail } from '@ng-icons/iconoir';
 import { simpleDotnet, simpleGithub, simpleTypescript, simpleMysql, simpleVisualstudiocode, 
   simpleAngular, simpleBootstrap, simpleReact, simpleJavascript, simpleTailwindcss, simpleAzuredevops,
-  simpleNodedotjs, simpleUnrealengine, simpleBlender, simpleAdobephotoshop, simpleAutodesk } from '@ng-icons/simple-icons';
+  simpleNodedotjs, simpleUnrealengine, simpleBlender, simpleAdobephotoshop, simpleAutodesk, simpleVuedotjs, simpleSass, simplePython } from '@ng-icons/simple-icons';
+import {bootstrapArrowBarDown} from '@ng-icons/bootstrap-icons';
 
 @Component({
   selector: 'app-root',
@@ -17,10 +18,10 @@ import { simpleDotnet, simpleGithub, simpleTypescript, simpleMysql, simpleVisual
   imports: [RouterOutlet, MpNavbarComponent, MpHeroAnimComponent, MpCardComponent, NgIconComponent, NgFor],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  viewProviders: [provideIcons({ ionLogoGithub, ionLogoLinkedin, iconoirVueJs, ionLogoSass, 
+  viewProviders: [provideIcons({ ionLogoGithub, ionLogoLinkedin, simpleVuedotjs, ionLogoSass, 
     simpleDotnet, simpleGithub, simpleTypescript, simpleMysql, simpleVisualstudiocode,
     simpleAngular, simpleBootstrap, simpleReact, simpleJavascript, simpleTailwindcss, simpleAzuredevops, simpleNodedotjs, simpleUnrealengine,
-    simpleBlender, simpleAdobephotoshop, simpleAutodesk, iconoirMail})]
+    simpleBlender, simpleAdobephotoshop, simpleAutodesk, iconoirMail, simpleSass, simplePython, bootstrapArrowBarDown})]
 })
 export class AppComponent implements AfterViewInit {
   @ViewChildren('contentWrapper', { read: ElementRef }) contentWrappers!: ElementRef[];
